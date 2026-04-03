@@ -18,11 +18,12 @@
     text-decoration: underline;
 }
 
-.name{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-}
+.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
-.name-hl{
-    color: #7726bd;
-}
+
