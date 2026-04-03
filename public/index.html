@@ -119,11 +119,11 @@
                 </button>
             </div>
 
-            <!-- Painel do Menu Mobile DENTRO DO HEADER -->
+            <!-- Painel do Menu Mobile dentro do header -->
             <div id="mobile-menu"
                 class="hidden absolute top-full left-0 w-full bg-[#171a21] border-t border-[#7726bd] flex-col p-6 shadow-xl z-40 md:hidden">
 
-                <!-- Perfil de Usuário Mobile -->
+                <!-- Perfil de Usuário mobile -->
                 <div class="flex items-center space-x-4 mb-4 border-[#7726bd]">
                     <div class="w-16 h-16 border-2 border-[#7726bd] p-[2px] flex-shrink-0">
                         <img src="/assets/user-dp.png" alt="Avatar" class="w-full h-full bg-[#1b2838] object-cover">
@@ -183,7 +183,7 @@
         </div>
     </main>
 
-    <!-- Botão Hambúrguer animação -->
+    <!-- Botão hambúrguer animação -->
     <script>
         const btn = document.getElementById('menu-toggle');
         const menu = document.getElementById('mobile-menu');
@@ -225,7 +225,7 @@
             }
         ];
 
-        // Sorteia um número aleatório baseado na quantidade de itens da lista
+        // Número aleatório baseado no tamanho da lista
         const randomIndex = Math.floor(Math.random() * gamesList.length);
         const selectedGame = gamesList[randomIndex];
 
@@ -247,11 +247,10 @@
     </script>
 
     <!-- Carrossel -->
-
     <!-- OFERTAS -->
     <div class="w-full max-w-7xl mx-auto mt-12 px-0 mb-20 relative">
 
-        <h2 class="text-2xl font-bold text-white mb-6 px-6 md:px-10 uppercase tracking-wider flex items-center">
+        <h2 class="text-2xl font-bold text-white mb-6 px-6 md:px-10 xl:px-0 uppercase tracking-wider flex items-center">
             <span class="w-2 h-6 bg-[#7726bd] mr-3"></span> Ofertas Especiais
         </h2>
 
@@ -261,76 +260,272 @@
 
         <div id="carousel-indicators" class="flex justify-center mt-6 space-x-2">
         </div>
-
     </div>
-    <!-- CARROSSEL-->
 
-
+    <!-- Banco de dados dos jogos-->
     <script>
-        // --------------------------------------------------------
-        // 1. BANCO DE DADOS (ARRAY) E GERAÇÃO DO HTML
-        // --------------------------------------------------------
-        const ofertasData = [
+
+        const gamesDatabase = [
             {
                 image: "/assets/MGS.png",
+                imageG: "/assets/MGS.png",
                 title: "Metal Gear Solid",
                 tags: ["Furtivo", "História sem sentido"],
                 discount: "-50%",
                 oldPrice: "R$ 199,90",
-                newPrice: "R$ 99,90"
+                newPrice: "R$ 99,90",
+                destaque: true
             },
             {
                 image: "/assets/MHFZZ.png",
+                imageG: "/assets/MHFZZ.png",
                 title: "Monster Hunter Frontier ZZ",
                 tags: ["ARPG", "Matar os bicho"],
                 discount: "-75%",
                 oldPrice: "R$ 149,00",
-                newPrice: "R$ 37,25"
+                newPrice: "R$ 37,25",
+                destaque: true
             },
             {
                 image: "/assets/RE4.png",
+                imageG: "/assets/RE4.png",
                 title: "Resident Evil 4",
                 tags: ["Zumbis", "Leon saradão"],
                 discount: "-20%",
                 oldPrice: "R$ 80,00",
-                newPrice: "R$ 64,00"
+                newPrice: "R$ 64,00",
+                destaque: true
             },
             {
                 image: "/assets/DBFZ.png",
+                imageG: "/assets/DBFZ.png",
                 title: "Dragon Ball Fighter Z",
                 tags: ["Luta", "Loiros gritando"],
                 discount: "-50%",
                 oldPrice: "R$ 250,00",
-                newPrice: "R$ 125,00"
+                newPrice: "R$ 125,00",
+                destaque: true
             },
             {
+
                 image: "/assets/RT.png",
+                imageG: "/assets/RT.png",
                 title: "The Room Three",
                 tags: ["Mistério", "Illuminatti"],
-                discount: "-50%",
-                oldPrice: "R$ 250,00",
-                newPrice: "R$ 125,00"
+                discount: "",
+                oldPrice: "",
+                newPrice: "R$ 125,00",
+                destaque: true
             },
             {
                 image: "/assets/SEF.png",
+                imageG: "/assets/SEF.png",
                 title: "Spyro 2 Season of Flame",
                 tags: ["Aventura", "Barney voador"],
                 discount: "-50%",
                 oldPrice: "R$ 250,00",
-                newPrice: "R$ 125,00"
+                newPrice: "R$ 125,00",
+                destaque: true
             },
-            // Para adicionar mais jogos, é só colocar uma vírgula e adicionar outro bloco igual acima!
+            {
+                image: "",
+                imageG: "/assets/AGE.png",
+                title: "Age of Empires",
+                tags: ["RTS"],
+                discount: "",
+                oldPrice: "",
+                newPrice: "R$ 45,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/BIO2.png",
+                title: "Bioshock 2",
+                tags: ["Aventura"],
+                discount: "-80%",
+                oldPrice: "R$ 100,00",
+                newPrice: "R$ 20,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/CELESTE.png",
+                title: "Bioshock 2",
+                tags: ["Aventura"],
+                discount: "",
+                oldPrice: "",
+                newPrice: "R$ 35,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/DBD.png",
+                title: "Dead by Daylight",
+                tags: ["Zumbis"],
+                discount: "-80%",
+                oldPrice: "R$ 200,00",
+                newPrice: "R$ 40,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/DISCO.png",
+                title: "Disco",
+                tags: ["Bullet hell"],
+                discount: "-10%",
+                oldPrice: "R$ 50,00",
+                newPrice: "R$ 45,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/EDM.png",
+                title: "Enigma do Medo",
+                tags: ["Mistério"],
+                discount: "-50%",
+                oldPrice: "R$ 22,00",
+                newPrice: "R$ 11,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/FF.png",
+                title: "Final Fantasy VII",
+                tags: ["RPG"],
+                discount: "-10%",
+                oldPrice: "R$ 180,00",
+                newPrice: "R$ 162,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/HADES.png",
+                title: "Hades",
+                tags: ["Porradaria"],
+                discount: "-30%",
+                oldPrice: "R$ 100,00",
+                newPrice: "R$ 70,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/NOITA.png",
+                title: "Noita",
+                tags: ["RPG"],
+                discount: "-40%",
+                oldPrice: "R$ 100,00",
+                newPrice: "R$ 60,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/PHASM.png",
+                title: "Phasmophobya",
+                tags: ["Medo"],
+                discount: "",
+                oldPrice: "",
+                newPrice: "R$ 45,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/RISK.png",
+                title: "Risk of Rain 2",
+                tags: ["Aventura"],
+                discount: "",
+                oldPrice: "",
+                newPrice: "R$ 80,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/SKYRIM.png",
+                title: "Skyrim",
+                tags: ["Dovahkin"],
+                discount: "10%",
+                oldPrice: "R$ 80,00",
+                newPrice: "R$ 72,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/SV.png",
+                title: "Stardew Valley",
+                tags: ["Frescurinha"],
+                discount: "-20%",
+                oldPrice: "R$ 50,00",
+                newPrice: "R$ 40,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/TERR.png",
+                title: "Terraria",
+                tags: ["Geologia"],
+                discount: "",
+                oldPrice: "",
+                newPrice: "R$ 35,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/TW3.png",
+                title: "The Witcher 3",
+                tags: ["Bruxaria"],
+                discount: "-90%",
+                oldPrice: "R$ 100,00",
+                newPrice: "R$ 10,00",
+                destaque: false
+            },
+            {
+                image: "",
+                imageG: "/assets/UT.png",
+                title: "Untertale",
+                tags: ["Ruindade pura"],
+                discount: "-50%",
+                oldPrice: "R$ 20,00",
+                newPrice: "R$ 10,00",
+                destaque: false
+            },
         ];
 
+    </script>
+
+
+
+
+
+
+
+    <!-- motor do carrossel-->
+    <script>
         const carousel = document.getElementById('game-carousel');
         const indicatorsContainer = document.getElementById('carousel-indicators');
 
-        // Ler array e montar cada página
-        ofertasData.forEach(game => {
-            // Transforma o array de tags em pedaços de HTML (Ex: ["RPG", "Ação"] vira dois <span>)
-            const tagsHtml = game.tags.map(tag => `<span class="bg-[#1b2838]/80 text-[#dcdedf] px-2 py-1 text-base rounded backdrop-blur-sm">${tag}</span>`).join('');
+        // Pega apenas os jogos com" destaque: true"
+        const carouselGames = gamesDatabase.filter(game => game.destaque === true);
 
-            // Monta a página inteira
+        carouselGames.forEach(game => {
+            const tagsHtml = game.tags.map(tag => `<span class="bg-[#1b2838]/80 text-[#dcdedf] px-2 py-1 text-xs md:text-sm rounded backdrop-blur-sm">${tag}</span>`).join('');
+
+            // mostra preços só se tiverem desconto
+            let priceBlockHtml = '';
+            if (game.discount && game.oldPrice) {
+                priceBlockHtml = `
+                    <span class="bg-[#4c6b22] text-white px-2.5 py-1 md:px-3 md:py-1 text-base md:text-lg font-bold rounded-sm mr-3">${game.discount}</span>
+                    <div class="flex flex-col text-right pr-2 justify-center">
+                        <span class="text-xs md:text-sm text-[#dcdedf] line-through leading-none">${game.oldPrice}</span>
+                        <span class="text-base md:text-xl text-white font-bold leading-none mt-1.5">${game.newPrice}</span>
+                    </div>
+                `;
+            } else {
+                priceBlockHtml = `
+                    <div class="flex flex-col text-right pr-2 justify-center py-1.5 w-full">
+                        <span class="text-base md:text-xl text-white font-bold leading-none">${game.newPrice}</span>
+                    </div>
+                `;
+            }
+
             const cardHtml = `
                 <div class="carousel-item snap-center shrink-0 w-full md:w-[80%] relative h-[250px] md:h-[350px] shadow-lg rounded-md hover:shadow-[#7726bd]/20 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden group">
                     <img src="${game.image}" alt="${game.title}" class="absolute inset-0 w-full h-full object-cover">
@@ -340,35 +535,35 @@
                     <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
                         <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#7726bd] transition-colors duration-200">${game.title}</h3>
                         <div class="flex items-end justify-between">
-                            <div class="flex space-x-2">
-                                ${tagsHtml}
-                            </div>
-                            
+                            <div class="flex space-x-2">${tagsHtml}</div>
                             <div class="flex items-center bg-[#171a21] p-2 md:p-2.5 rounded border border-[#1b2838]">
-                                <span class="bg-[#4c6b22] text-white px-2.5 py-1 md:px-3 md:py-1 text-base md:text-lg font-bold rounded-sm mr-3">${game.discount}</span>
-                                <div class="flex flex-col text-right pr-2">
-                                    <span class="text-xs md:text-sm text-[#dcdedf] line-through leading-none">${game.oldPrice}</span>
-                                    <span class="text-base md:text-xl text-white font-bold leading-none mt-1.5">${game.newPrice}</span>
-                                </div>
+                                ${priceBlockHtml}
                             </div>
-                            
                         </div>
                     </div>
                 </div>
             `;
-            // Injeta o HTML dentro da Div do Carrossel
             carousel.insertAdjacentHTML('beforeend', cardHtml);
         });
 
 
-        // Guarda os itens originais gerados pelo JS acima
+
+        // função de esteira infinita do carrossel
+        function scrollCarouselTo(item, isSmooth = true) {
+            const scrollPos = item.offsetLeft - carousel.offsetLeft - (carousel.clientWidth - item.clientWidth) / 2;
+            carousel.scrollTo({ left: scrollPos, behavior: isSmooth ? 'smooth' : 'auto' });
+        }
         const originalItems = Array.from(carousel.querySelectorAll('.carousel-item'));
         const originalCount = originalItems.length;
 
-        let currentIndex = 1; // Aponta para a Segunda Página
+        // inicia na página 2
+        let currentIndex = 1;
         let autoPlayInterval;
 
-        // Cria os botões retangulares
+        // limpa os indicadores antes de criar (segurança)
+        indicatorsContainer.innerHTML = '';
+
+        // cria os botões
         originalItems.forEach((_, index) => {
             const dot = document.createElement('button');
             dot.className = `indicator-dot h-1.5 w-8 rounded-full transition-colors duration-300 ${index === currentIndex ? 'bg-[#7726bd]' : 'bg-[#dcdedf] hover:bg-[#7726bd]'}`;
@@ -380,7 +575,7 @@
                 let targetIndex = currentSetBase + index;
 
                 if (allItems[targetIndex]) {
-                    allItems[targetIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    scrollCarouselTo(allItems[targetIndex], true);
                 }
                 startAutoPlay();
             });
@@ -389,11 +584,8 @@
 
         const dots = document.querySelectorAll('.indicator-dot');
 
-        // IntersectionObserver
-        const observerOptions = {
-            root: carousel,
-            threshold: 0.6
-        };
+        // controle da rolagem/vigia (IntersectionObserver)
+        const observerOptions = { root: carousel, threshold: 0.6 };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -407,7 +599,6 @@
                         d.classList.toggle('bg-[#dcdedf]', i !== realDotIndex);
                     });
 
-                    // Clona a sequência original se chegar perto do fim
                     if (currentIndex >= allItems.length - 2) {
                         originalItems.forEach(item => {
                             const clone = item.cloneNode(true);
@@ -426,9 +617,9 @@
             autoPlayInterval = setInterval(() => {
                 const allItems = carousel.querySelectorAll('.carousel-item');
                 currentIndex++;
-
                 if (allItems[currentIndex]) {
-                    allItems[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    // SUBSTITUA O scrollIntoView POR ESTA LINHA:
+                    scrollCarouselTo(allItems[currentIndex], true);
                 }
             }, 4000);
         }
@@ -437,22 +628,89 @@
             clearInterval(autoPlayInterval);
         }
 
-        // Inicia o scroll pela segunda página
-        window.addEventListener('load', () => {
+        // inicia rolagem do carrossel
+        function initCarousel() {
             carousel.classList.remove('scroll-smooth');
-            originalItems[1].scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+            if (originalItems[1]) {
+                scrollCarouselTo(originalItems[1], false);
+            }
             setTimeout(() => {
                 carousel.classList.add('scroll-smooth');
                 startAutoPlay();
             }, 100);
-        });
+        }
 
-        // Pausa no hover de mouse
+        if (document.readyState === 'complete') {
+            initCarousel();
+        } else {
+            window.addEventListener('load', initCarousel);
+        }
+
         carousel.addEventListener('mouseenter', stopAutoPlay);
         carousel.addEventListener('mouseleave', startAutoPlay);
         carousel.addEventListener('touchstart', stopAutoPlay, { passive: true });
         carousel.addEventListener('touchend', startAutoPlay);
     </script>
+
+
+
+
+
+
+    <!-- Galeria de jogos -->
+    <div class="w-full max-w-7xl mx-auto mt-12 px-0 mb-20 relative">
+
+        <h2 class="text-2xl font-bold text-white mb-6 px-6 md:px-10 xl:px-0 uppercase tracking-wider flex items-center">
+            <span class="w-2 h-6 bg-[#7726bd] mr-3"></span> Catálogo Completo
+        </h2>
+
+        <div id="game-gallery"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 px-4 md:px-10 xl:px-0">
+        </div>
+
+    </div>
+    <!-- Gerador da galeira -->
+    <script>
+        const galleryContainer = document.getElementById('game-gallery');
+
+        // rodar apenas se o HTML da galeria existir na tela
+        if (galleryContainer) {
+            gamesDatabase.forEach(game => {
+                let galleryPriceHtml = '';
+                if (game.discount && game.oldPrice) {
+                    galleryPriceHtml = `
+                        <span class="bg-[#4c6b22] text-white px-2 py-1 text-lg md:text-lg font-bold rounded-sm">${game.discount}</span>
+                        <div class="flex flex-col text-right">
+                            <span class="text-[10px] md:text-xs text-[#dcdedf] line-through leading-none">${game.oldPrice}</span>
+                            <span class="text-sm md:text-lg text-white font-bold leading-none mt-1">${game.newPrice}</span>
+                        </div>
+                    `;
+                } else {
+                    galleryPriceHtml = `
+                        <div class="w-full text-right py-1">
+                            <span class="text-lg md:text-lg text-white font-bold leading-none">${game.newPrice}</span>
+                        </div>
+                    `;
+                }
+
+                const galleryCardHtml = `
+                    <div class="bg-[#171a21] transition-all duration-300 cursor-pointer flex flex-col group border-2 border-[#1b2838] hover:border-white">
+                        <div class="w-full aspect-[3/4] hover:translate-y-1 relative overflow-hidden bg-white">
+                            <img src="${game.imageG}" alt="${game.title}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-3 flex items-center justify-between mt-auto">
+                            ${galleryPriceHtml}
+                        </div>
+                    </div>
+                `;
+                galleryContainer.insertAdjacentHTML('beforeend', galleryCardHtml);
+            });
+        }
+    </script>
+
+
+
+
 
 
 
