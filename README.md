@@ -67,7 +67,8 @@ Uma forma simples e igualmente funcionadl de rodar um servidor web para acessar 
 # 📁 Estrutura de Arquivos
 ```
 /
-├── assets/             # Imagens, logos e ícones
+├── public
+   └── assets           # Imagens, logos e ícones
 ├── index.html          # Estrutura principal da página, Tailwind e Scripts de UI
 ├── style.css           # Estilos customizados complementares ao Tailwind
 └── README.md           # Documentação do projeto
