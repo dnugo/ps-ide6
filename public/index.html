@@ -1,118 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt">
-<!---->
+<!-- Cabeçalho do Documento -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Chamador do CSS -->
+    <!-- Chamador do CSS -->
     <link rel="stylesheet" href="/style.css">
 
-
-    <!--Carregador do Google Fonts-->
+    <!-- Carregador do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <!--Carregador do Tailwind-->
+    <!-- Carregador do Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>IDEX - Processo Seletivo IDE 2026-1</title>
 </head>
-<!--Corpo da página-->
 
-<body class="bg-[#1b2838] text-white p-10">
+<!-- Corpo da página -->
 
-    <!--Barra de menu (cabeçalho)-->
-    <header class="bg-[#171a21] px-10 py-0 flex items-center justify-between shadow-md">
+<body class="bg-[#1b2838] text-white">
 
-        <!--Logo IDE-->
-        <div class="flex items-center">
-            <img src="/assets/logo.png" alt="IDE, é isso aí!"
-                class="w-48 h-auto object-contain transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-3 cursor-pointer">
-        </div>
+    <!-- Barra de menu (cabeçalho) -->
+    <header class="w-full bg-[#171a21] shadow-md relative z-50">
+        <div class="w-full max-w-7xl mx-auto px-4 md:px-4 py-3 md:py-0 flex items-center justify-between">
 
-        <!--Menu-->
-        <nav class="hidden md:flex space-x-20 text-[#dcdedf] font-semibold uppercase text-lg">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link">Ofertas</a>
-            <a href="#" class="nav-link">Destaques</a>
-        </nav>
+            <!-- Logo IDE -->
+            <div class="flex items-center">
+                <img src="/assets/logo.png" alt="IDE, é isso aí!"
+                    class="w-36 md:w-48 h-auto object-contain transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-3 cursor-pointer">
+            </div>
 
-        <!-- Bloco direito (Ponta do Header) -->
-        <div class="flex items-center">
+            <!-- Menu Desktop (Oculto no mobile) -->
+            <nav class="hidden md:flex space-x-20 text-[#dcdedf] font-semibold uppercase text-lg">
+                <a href="#"
+                    class="text-[#7726bd] underline underline-offset-8 decoration-2 transition-all duration-300">Home</a>
+                <a href="#"
+                    class="hover:text-[#7726bd] hover:underline underline-offset-8 decoration-2 transition-all duration-300">Ofertas</a>
+                <a href="#"
+                    class="hover:text-[#7726bd] hover:underline underline-offset-8 decoration-2 transition-all duration-300">Destaques</a>
+            </nav>
 
-            <!-- Bloco interno 1: Lado Esquerdo (Contém Saudação e Botões) -->
-            <div class="flex flex-col items-center justify-center w-60 text-center">
+            <!-- Bloco direito Desktop (Oculto no mobile) -->
+            <div class="hidden md:flex items-center">
+                <!-- Lado Esquerdo (Contém Saudação e Botões) -->
+                <div class="flex flex-col items-center justify-center w-60 text-center">
+                    <!-- Saudação e nome de usuário -->
+                    <div class="flex items-center justify-center mb-2">
+                        <p class="flex items-center text-sm">
+                            <span class="text-[#dcdedf] text-lg sm:block">Olá,&nbsp;</span>
+                            <span class="text-[#7726bd] text-xl hidden sm:inline font-semibold">Fulano</span>
+                            <span class="text-[#dcdedf] text-lg hidden sm:inline">!</span>
+                        </p>
+                    </div>
 
-                <!-- Saudação e nome de usuário -->
-                <div class="flex items-center justify-center mb-2">
-                    <p class="flex items-center text-sm">
-                        <span class="text-[#dcdedf] text-lg sm:block">Olá,&nbsp;</span>
-                        <span class="text-[#7726bd] text-xl hidden sm:inline font-semibold">Fulano</span>
-                        <span class="text-[#dcdedf] text-lg hidden sm:inline">!</span>
-                    </p>
+                    <!-- Fileira de Botões de Interação -->
+                    <div class="flex items-center justify-center space-x-6">
+                        <button class="text-[#dcdedf] hover:text-red-500 transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-8 w-8 transition-transform duration-300 hover:scale-110" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </button>
+                        <button class="text-[#dcdedf] hover:text-yellow-400 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-8 w-8 transition-transform duration-500 hover:rotate-12" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </button>
+                        <button class="text-[#dcdedf] hover:text-green-400 transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-8 w-8 transition-transform duration-500 hover:rotate-90" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- Avatar Desktop -->
+                <div class="w-[100px] h-[100px] border-2 border-[#7726bd] p-[2px] flex-shrink-0 ml-4">
+                    <img src="/assets/user-dp.png" alt="Avatar" class="w-full h-full bg-[#1b2838] object-cover">
+                </div>
+            </div>
+
+            <!-- Bloco direito Mobile: Carrinho + Botão Hambúrguer Animado -->
+            <div class="flex md:hidden items-center space-x-2">
+                <!-- Botão de carrinho Mobile -->
+                <button class="p-2 text-[#dcdedf] hover:text-red-500 transition-colors duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-8 w-8 transition-transform duration-300 hover:scale-110" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </button>
+
+                <!-- Botão Hambúrguer Animado -->
+                <button id="menu-toggle"
+                    class="relative p-2 rounded-lg text-[#dcdedf] hover:text-white transition-all duration-300 focus:outline-none">
+                    <svg id="icon-burger" xmlns="http://www.w3.org/2000/svg"
+                        class="h-9 w-9 transition-all duration-300 transform rotate-0 scale-100 opacity-100" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+
+                </button>
+            </div>
+
+            <!-- Painel do Menu Mobile DENTRO DO HEADER -->
+            <div id="mobile-menu"
+                class="hidden absolute top-full left-0 w-full bg-[#171a21] border-t border-[#7726bd] flex-col p-6 shadow-xl z-40 md:hidden">
+
+                <!-- Perfil de Usuário Mobile -->
+                <div class="flex items-center space-x-4 mb-4 border-[#7726bd]">
+                    <div class="w-16 h-16 border-2 border-[#7726bd] p-[2px] flex-shrink-0">
+                        <img src="/assets/user-dp.png" alt="Avatar" class="w-full h-full bg-[#1b2838] object-cover">
+                    </div>
+                    <div>
+                        <span class="text-[#dcdedf] text-lg">Olá, </span>
+                        <span class="text-[#7726bd] text-xl font-semibold">Fulano</span>
+                        <span class="text-[#dcdedf] text-lg">!</span>
+                    </div>
                 </div>
 
-                <!-- Fileira de Botões de Interação -->
-                <div class="flex items-center justify-center space-x-6">
-
-                    <!-- Botão de carrinho de compras -->
-                    <button class="text-[#dcdedf] hover:text-red-500 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-8 w-8 transition-transform duration-300 hover:scale-110" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                    </button>
-
-                    <!-- Botão de avisos (Sino) -->
-                    <button class="text-[#dcdedf] hover:text-yellow-400 transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-8 w-8 transition-transform duration-500 hover:rotate-12" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
+                <!-- Botões de Ação Mobile Restantes -->
+                <div class="flex items-center justify-center space-x-8 pb-4 border-b-2 border-[#1b2838]">
+                    <button
+                        class="flex items-center space-x-3 text-[#dcdedf] hover:text-yellow-400 text-lg font-semibold transition-colors duration-200 w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                         </svg>
+                        <span>Avisos</span>
                     </button>
-
-                    <!-- Botão de configurações (Engrenagem) -->
-                    <button class="text-[#dcdedf] hover:text-green-400 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-8 w-8 transition-transform duration-500 hover:rotate-90" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
+                    <button
+                        class="flex items-center space-x-3 text-[#dcdedf] hover:text-green-400 text-lg font-semibold transition-colors duration-200 w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
+                        <span>Opções</span>
                     </button>
-
-
                 </div>
-            </div>
 
-            <!-- Bloco interno 2: Foto do usuário (Avatar tamanho 100px) -->
-            <div class="w-[100px] h-[100px] border-2 border-[#4c6b22] p-[2px] flex-shrink-0">
-                <img src="/assets/user-dp.png" alt="Avatar" class="w-full h-full bg-[#1b2838] object-cover">
+                <!-- Navegação Mobile -->
+                <nav
+                    class="flex flex-col space-y-4 font-semibold uppercase text-lg mb-6 border-b-2 border-[#1b2838] pt-4 pb-4">
+                    <a href="#"
+                        class="text-[#7726bd] underline underline-offset-8 decoration-2 transition-all duration-300 w-fit">Home</a>
+                    <a href="#"
+                        class="text-[#dcdedf] hover:text-[#7726bd] hover:underline underline-offset-8 decoration-2 transition-all duration-300 w-fit">Ofertas</a>
+                    <a href="#"
+                        class="text-[#dcdedf] hover:text-[#7726bd] hover:underline underline-offset-8 decoration-2 transition-all duration-300 w-fit">Destaques</a>
+                </nav>
+
             </div>
+        </div>
+    </header>
+
+
+    <!-- Seção do banner/hero-->
+    <main class="w-full">
+
+        <!-- Adicionamos max-w-[1920px] e mx-auto para travar o crescimento e centralizar -->
+        <div id="hero-banner"
+            class="w-full max-w-7xl aspect-video mx-auto sm:h-[400px] md:h-[500px] bg-cover bg-center relative flex items-end">
+
+            <!-- Gradiente mantido --
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1b2838] via-[#1b2838]/40 to-transparent"></div>-->
 
         </div>
+    </main>
 
-</body>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                fontFamily: {
-                    // 2. Definindo a Roboto como a fonte sans padrão do projeto
-                    sans: ['Roboto', 'sans-serif'],
+
+
+    <!-- Script para fazer o botão Hambúrguer funcionar e animar -->
+    <script>
+        const btn = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const iconBurger = document.getElementById('icon-burger');
+        //const iconClose = document.getElementById('icon-close');
+
+        btn.addEventListener('click', () => {
+            // Mostra/Esconde o painel
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+
+            // Troca a cor de fundo do botão para destacar que está ativo
+            btn.classList.toggle('bg-[#7726bd]');
+
+            // Animação: Esconde o Hambúrguer girando
+            iconBurger.classList.toggle('rotate-180');
+
+        });
+
+
+        // Array com jogos em destaque
+        const gamesList = [
+            {
+                image: "/assets/HERO-01.png"
+            },
+            {
+                image: "/assets/HERO-02.png"
+            },
+            {
+                image: "/assets/HERO-03.png"
+            },
+            {
+                image: "/assets/HERO-04.png"
+            },
+            {
+                image: "/assets/HERO-05.png"
+            },
+            {
+                image: "/assets/HERO-06.png"
+            }
+        ];
+
+        // Sorteia um número aleatório baseado na quantidade de itens da lista
+        const randomIndex = Math.floor(Math.random() * gamesList.length);
+        const selectedGame = gamesList[randomIndex];
+
+        // Injeta a imagem no HTML
+        const bannerElement = document.getElementById('hero-banner');
+        bannerElement.style.backgroundImage = `url('${selectedGame.image}')`;
+
+
+        // Configuração do Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    }
                 }
             }
         }
-    }
-</script>
+    </script>
+</body>
 
 </html>
