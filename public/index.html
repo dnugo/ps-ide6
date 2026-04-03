@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<!---->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Chamador do CSS -->
+    <link rel="stylesheet" href="/style.css">
+
+
+    <!--Carregador do Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!--Carregador do Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>IDEX - Processo Seletivo IDE 2026-1</title>
+</head>
+<!--Corpo da página-->
+
+<body class="bg-[#1b2838] text-white p-10">
+
+    <!--Barra de menu (cabeçalho)-->
+    <header class="bg-[#171a21] px-10 py-0 flex items-center justify-between shadow-md">
+
+        <!--Logo IDE-->
+        <div class="flex items-center">
+            <img src="/assets/logo.png" alt="IDE, é isso aí!"
+                class="w-48 h-auto object-contain transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-3 cursor-pointer">
+        </div>
+
+        <!--Menu-->
+        <nav class="hidden md:flex space-x-20 text-[#dcdedf] font-semibold uppercase text-lg">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Ofertas</a>
+            <a href="#" class="nav-link">Destaques</a>
+        </nav>
+
+        <!-- Bloco direito (Ponta do Header) -->
+        <div class="flex items-center">
+
+            <!-- Bloco interno 1: Lado Esquerdo (Contém Saudação e Botões) -->
+            <div class="flex flex-col items-center justify-center w-60 text-center">
+
+                <!-- Saudação e nome de usuário -->
+                <div class="flex items-center justify-center mb-2">
+                    <p class="flex items-center text-sm">
+                        <span class="text-[#dcdedf] text-lg sm:block">Olá,&nbsp;</span>
+                        <span class="text-[#7726bd] text-xl hidden sm:inline font-semibold">Fulano</span>
+                        <span class="text-[#dcdedf] text-lg hidden sm:inline">!</span>
+                    </p>
+                </div>
+
+                <!-- Fileira de Botões de Interação -->
+                <div class="flex items-center justify-center space-x-6">
+
+                    <!-- Botão de carrinho de compras -->
+                    <button class="text-[#dcdedf] hover:text-red-500 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 transition-transform duration-300 hover:scale-110" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </button>
+
+                    <!-- Botão de avisos (Sino) -->
+                    <button class="text-[#dcdedf] hover:text-yellow-400 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 transition-transform duration-500 hover:rotate-12" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                        </svg>
+                    </button>
+
+                    <!-- Botão de configurações (Engrenagem) -->
+                    <button class="text-[#dcdedf] hover:text-green-400 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 transition-transform duration-500 hover:rotate-90" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+            </div>
+
+            <!-- Bloco interno 2: Foto do usuário (Avatar tamanho 100px) -->
+            <div class="w-[100px] h-[100px] border-2 border-[#4c6b22] p-[2px] flex-shrink-0">
+                <img src="/assets/user-dp.png" alt="Avatar" class="w-full h-full bg-[#1b2838] object-cover">
+            </div>
+
+        </div>
+
+</body>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    // 2. Definindo a Roboto como a fonte sans padrão do projeto
+                    sans: ['Roboto', 'sans-serif'],
+                }
+            }
+        }
+    }
+</script>
+
+</html>
