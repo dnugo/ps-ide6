@@ -31,13 +31,13 @@ A melhor forma de visualizar o projeto garantindo que todas as requisições de 
 
 1. Clone este repositório para a sua máquina:
 
-   ```git clone [https://github.com/dnugo/ps-ide6.git)```
+   ```git clone https://github.com/dnugo/ps-ide6.git```
 
 2. Instale o Node.JS no seu computador
 
 3. Abra a pasta do projeto no Visual Studio Code.
 
-4. Execute no terminal o comando ``node server.js``
+4. Execute no terminal o comando ```node server.js```
 
 
 ### Opção 2: Via VS Code com Live Server
@@ -45,7 +45,7 @@ Uma forma simples e igualmente funcionadl de rodar um servidor web para acessar 
 
 1. Clone este repositório para a sua máquina:
 
-   ``git clone [https://github.com/dnugo/ps-ide6.git](https://github.com/dnugo/ps-ide6.git)``
+   ```git clone https://github.com/dnugo/ps-ide6.git```
 
 2. Abra a pasta do projeto no Visual Studio Code.
 
@@ -64,13 +64,16 @@ Uma forma simples e igualmente funcionadl de rodar um servidor web para acessar 
 3. Dê um duplo clique no arquivo index.html para abri-lo diretamente no seu navegador. (Nota: dependendo do nível de segurança do seu computador, é possível que a página não carregue ou seja exibida totalmente ou corretamente)
 
 
-## 📁 Estrutura de Arquivos
-``/``
-``├── assets/             # Imagens, logos e ícones``
-``├── index.html          # Estrutura principal da página, Tailwind e Scripts de UI``
-``├── style.css           # Estilos customizados complementares ao Tailwind``
-``└── README.md           # Documentação do projeto``
+# 📁 Estrutura de Arquivos
+```
+/
+├── assets/             # Imagens, logos e ícones
+├── index.html          # Estrutura principal da página, Tailwind e Scripts de UI
+├── style.css           # Estilos customizados complementares ao Tailwind
+└── README.md           # Documentação do projeto
+```
 
 
-======
-Projeto desenvolvido por Diego Fernandes Silva (``dnugo``) para o Processo Seletivo de novos membros IDE JR 2026-1
+
+> [!NOTE]
+> Projeto desenvolvido por Diego Fernandes Silva (``dnugo``) para o Processo Seletivo de novos membros IDE JR 2026-1
